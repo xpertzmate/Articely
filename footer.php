@@ -61,7 +61,7 @@
 
     </div>
     <!-- /._aty-wrapper._aty-text-center -->
-    <div class="_aty-wrapper _aty-sticky">
+    <div class="_aty-wrapper _aty-full-wrapper _aty-sticky">
         logo | Search Box | Menu Items | Top
 
         <div class="_aty-logo _aty-5-per">
@@ -84,7 +84,7 @@
         </div>
         <!-- /._aty-goto-top -->
     </div>
-    <!-- /._aty-wrapper _aty-sticky -->
+    <!-- /._aty-wrapper._aty-full-wrapper._aty-sticky -->
 </footer>
 <!-- /._aty-site-footer -->
 <?php wp_footer(); ?>
