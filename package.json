@@ -1,0 +1,46 @@
+{
+  "name": "articely",
+  "version": "1.0.0",
+  "description": "2021 Wordpress Blogging Theme ",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/register": "^7.13.16",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.14",
+    "browserify": "^17.0.0",
+    "cssnano": "^5.0.2",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.14",
+    "require-globify": "^1.4.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpertzmate/Articely.git"
+  },
+  "keywords": [
+    "Blog",
+    "Wordpress",
+    "Theme"
+  ],
+  "author": "XpertzMate Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xpertzmate/Articely/issues"
+  },
+  "homepage": "https://github.com/xpertzmate/Articely#readme"
+}
