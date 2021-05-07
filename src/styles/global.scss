@@ -1,5 +1,8 @@
-@import 'common/variables';
-@import 'common/base';
+@import "./node_modules/normalize-scss/sass/normalize";
+
+
+@import 'common/common';
 
 @import 'includes/header';
+
 @import 'includes/footer';

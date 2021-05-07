@@ -4,7 +4,8 @@
   "description": "2021 Wordpress Blogging Theme ",
   "main": "index.js",
   "dependencies": {
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",

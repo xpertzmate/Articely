@@ -25,6 +25,12 @@ function browserSyncCallback() {
     })
 }
 
+function bSyncReload(done) {
+    browserSync.reload();
+    done();
+
+}
+
 // To prevent rewriting the source and build folder locations
 const paths = {
     source: './src',
@@ -70,8 +76,8 @@ function cleanup() {
 }
 
 function watching() {
-    watch([`${paths.source}/styles/*.scss`, `${paths.source}/styles/**/*.scss`], series(buildStyle, browserSync.reload))
-    watch([`${paths.source}/scripts/*.js`, `${paths.source}/scripts/**/*.js`], series(buildScript, browserSync.reload))
+    watch([`${paths.source}/styles/*.scss`, `${paths.source}/styles/**/*.scss`], series(buildStyle, bSyncReload()))
+    watch([`${paths.source}/scripts/*.js`, `${paths.source}/scripts/**/*.js`], series(buildScript, bSyncReload()))
 }
 
 
