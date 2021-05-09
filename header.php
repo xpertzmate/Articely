@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <header class="_aty-site-header clearfix">
-        <div class="_aty-wrapper">
+        <div class="_aty-wrapper flex">
             <div class="_aty-block _aty-3">
                 <div class="_aty-primary-logo">
                     <?php
@@ -22,10 +22,7 @@
                     <!-- /._aty-href -->
                 </div>
                 <!-- /._aty-primary-logo -->
-                <div class="_aty-secondary-logo"><a href="https://www.xpertzmate.com" target="_blank" class="_aty-href"><img src="<?php echo ARTICELY_URL . '/assets/img/xpertzmate.svg'; ?>" alt="XpertzMate" class="_aty-img"></a>
-                    <!-- /._aty-href -->
-                </div>
-                <!-- /._aty-secondary-logo -->
+         
             </div>
             <!-- /._aty-block -->
             <div class="_aty-block _aty-7">

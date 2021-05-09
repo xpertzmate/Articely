@@ -16,7 +16,13 @@
         </div>
         <!-- /._aty-block -->
         <div class="_aty-block _aty-logo _aty-6">
-            <img src="<?php echo ARTICELY_URL . '/assets/img/logo.svg'; ?>" alt="Articely" class="_aty-img">
+            <div class="_aty-secondary-logo">
+                <a href="https://www.xpertzmate.com" target="_blank" class="_aty-href">
+                    <img src="<?php echo ARTICELY_URL . '/assets/img/xpertzmate.svg'; ?>" alt="XpertzMate" class="_aty-img">
+                </a>
+                <!-- /._aty-href -->
+            </div>
+            <!-- /._aty-secondary-logo -->
         </div>
         <!-- /._aty-block -->
         <div class="_aty-block _aty-info _aty-3">
