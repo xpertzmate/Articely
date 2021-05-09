@@ -16,6 +16,8 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
+const Fiber = require('fibers');
+
 
 
 function browserSyncCallback() {
@@ -27,8 +29,6 @@ function browserSyncCallback() {
 
 function bSyncReload(done) {
     browserSync.reload();
-    done();
-
 }
 
 // To prevent rewriting the source and build folder locations
@@ -62,7 +62,7 @@ function buildScript() {
 function buildStyle() {
     return (
         src(`${paths.source}/styles/*.scss`)
-            .pipe(sass().on('error', sass.logError))
+            .pipe(sass({fiber: Fiber}).on('error', sass.logError))
             .pipe(postcss([cssnano()]))
             .pipe(dest(`${paths.build}/styles`))
     );
@@ -76,11 +76,11 @@ function cleanup() {
 }
 
 function watching() {
-    watch([`${paths.source}/styles/*.scss`, `${paths.source}/styles/**/*.scss`], series(buildStyle, bSyncReload()))
-    watch([`${paths.source}/scripts/*.js`, `${paths.source}/scripts/**/*.js`], series(buildScript, bSyncReload()))
+    watch([`${paths.source}/styles/*.scss`, `${paths.source}/styles/**/*.scss`], buildStyle )
+    watch([`${paths.source}/scripts/*.js`, `${paths.source}/scripts/**/*.js`], buildScript)
 }
 
-
+exports.watching = watching
 exports.build = series(cleanup, parallel(buildScript, buildStyle))
 exports.watch = parallel(buildScript, buildStyle, browserSyncCallback, watching)
 exports.default = series(cleanup, parallel(buildScript, buildStyle), browserSyncCallback, watching)
