@@ -1,6 +1,6 @@
 <footer class="_aty-site-footer">
     <div class="_aty-wrapper">
-        <div class="_aty-col _aty-info">
+        <div class="_aty-block _aty-info _aty-3">
             <div class="_aty-info-block">
                 <label>E-Mail</label>
                 <a href="mailto:help@articely.com">help@articely.com</a>
@@ -14,12 +14,12 @@
             <!-- /._aty-info-block -->
 
         </div>
-        <!-- /._aty-col -->
-        <div class="_aty-col _aty-logo">
-            <img src="" height="" width="" alt="" title="" />
+        <!-- /._aty-block -->
+        <div class="_aty-block _aty-logo _aty-6">
+            <img src="//localhost:3000/wp-content/uploads/2021/05/Articely.svg" alt="Articely" class="_aty-img">
         </div>
-        <!-- /._aty-col -->
-        <div class="_aty-col _aty-info">
+        <!-- /._aty-block -->
+        <div class="_aty-block _aty-info _aty-3">
             <div class="_aty-info-block">
                 <label>Social Media</label>
                 <ul class="_aty-social-media-icon">
@@ -48,7 +48,7 @@
             </div>
             <!-- /._aty-info-block -->
         </div>
-        <!-- /._aty-col -->
+        <!-- /._aty-block -->
     </div>
     <!-- /._aty-wrapper -->
     <div class="_aty-wrapper _aty-text-center">
@@ -62,25 +62,38 @@
     </div>
     <!-- /._aty-wrapper._aty-text-center -->
     <div class="_aty-wrapper _aty-full-wrapper _aty-sticky">
-        logo | Search Box | Menu Items | Top
-
         <div class="_aty-logo _aty-5-per">
             <a href="" class="_aty-href">
-                <img src="" alt="" class="_aty-img">
+                <img src="<?php echo ARTICELY_URL . '/assets/img/favicon.svg'; ?>" alt="XpertzMate" class="_aty-img">
             </a>
             <!-- /._aty-href -->
         </div>
         <!-- /._aty-logo -->
         <div class="_aty-search-form _aty-20-per">
-            Search Form
+            <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
+                <label>
+                    <span class="screen-reader-text"><?php echo _x('Search for:', 'label') ?></span>
+                    <input type="search" class="search-field" placeholder="<?php echo esc_attr_x('Search …', 'placeholder') ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x('Search for:', 'label') ?>" />
+                </label>
+                <input type="submit" class="search-submit" value="<?php echo esc_attr_x('Search', 'submit button') ?>" />
+            </form>
         </div>
         <!-- /._aty-search-form -->
         <div class="_aty-menu-items _aty-70-per">
-            Menu
+            <?php
+            wp_nav_menu([
+                'container' => false,
+                'menu_id' => 'footer-menu',
+                'menu_class' => '_aty-footer-menu',
+                'theme_location' => 'footer'
+            ]);
+            ?>
         </div>
         <!-- /._aty-menu-items -->
         <div class="_aty-goto-top _aty-5-per">
-            Top
+            <a href="#" class="_aty-href">
+                <img src="<?php echo ARTICELY_URL . '/assets/img/gotop.svg'; ?>" alt="<?php echo get_bloginfo('name'); ?>" class="_aty-img">
+            </a>
         </div>
         <!-- /._aty-goto-top -->
     </div>

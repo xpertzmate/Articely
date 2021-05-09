@@ -12,31 +12,39 @@
     <?php wp_body_open(); ?>
     <header class="_aty-site-header clearfix">
         <div class="_aty-wrapper">
-            <div class="_aty-col _aty-3">
+            <div class="_aty-block _aty-3">
                 <div class="_aty-primary-logo">
                     <?php
                     $siteLogo = get_theme_mod('custom_logo');
-                    $logoImg = ($siteLogo) ?  wp_get_attachment_image_src($siteLogo, 'full')[0] : ARTICELY_URL . 'assets/img/logo.svg';
+                    $logoImg = ($siteLogo) ?  wp_get_attachment_image_src($siteLogo, 'full')[0] : ARTICELY_URL . '/assets/img/logo.svg';
                     ?>
                     <a href="<?php echo esc_url(home_url('/')); ?>" class="_aty-href" rel="home"><img src="<?php echo esc_url($logoImg); ?>" alt="<?php echo get_bloginfo('name'); ?>" class="_aty-img"></a>
                     <!-- /._aty-href -->
                 </div>
                 <!-- /._aty-primary-logo -->
-                <div class="_aty-secondary-logo"><a href="" class="_aty-href"><img src="" alt="" class="_aty-img"></a>
+                <div class="_aty-secondary-logo"><a href="https://www.xpertzmate.com" target="_blank" class="_aty-href"><img src="<?php echo ARTICELY_URL . '/assets/img/xpertzmate.svg'; ?>" alt="XpertzMate" class="_aty-img"></a>
                     <!-- /._aty-href -->
                 </div>
                 <!-- /._aty-secondary-logo -->
             </div>
-            <!-- /._aty-col -->
-            <div class="_aty-col _aty-7">
+            <!-- /._aty-block -->
+            <div class="_aty-block _aty-7">
+                <?php
+                wp_nav_menu([
+                    'container' => false,
+                    'menu_id' => 'header-menu',
+                    'menu_class' => '_aty-header-menu',
+                    'theme_location' => 'header'
+                ]);
+                ?>
             </div>
-            <!-- /._aty-col -->
-            <div class="_aty-col _aty-2">
+            <!-- /._aty-block -->
+            <div class="_aty-block _aty-2">
                 <div class="_aty-search-block">
                 </div>
                 <!-- /._aty-search-block -->
             </div>
-            <!-- /._aty-col -->
+            <!-- /._aty-block -->
         </div>
         <!-- /._aty-wrapper -->
     </header>

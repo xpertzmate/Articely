@@ -11,15 +11,15 @@ get_header();
     <dev class="_aty-wrapper" data-id="_aty-articles-wrapper">
 
         <article class="_aty-article" id="article-id">
-            <div class="_aty-col _aty-featured-block">
+            <div class="_aty-block _aty-featured-block">
                 <figure class="_aty-featured-img">
                 </figure>
                 <!-- /._aty-featured-img -->
 
             </div>
-            <!-- /._aty-col._aty-featured-block -->
+            <!-- /._aty-block._aty-featured-block -->
 
-            <div class="_aty-col _aty-content-block">
+            <div class="_aty-block _aty-content-block">
                 <ul class="_aty-category-list"></ul>
                 <!-- /._aty-category-list -->
                 <h2 class="entry-title">
@@ -35,14 +35,14 @@ get_header();
                 </div>
                 <!-- /._aty-read-more -->
             </div>
-            <!-- /._aty-col._aty-content-block -->
+            <!-- /._aty-block._aty-content-block -->
         </article>
         <!-- /._aty-article -->
 
 
         <article class="_aty-article" id="article-id">
 
-            <div class="_aty-col _aty-content-block">
+            <div class="_aty-block _aty-content-block">
                 <ul class="_aty-category-list"></ul>
                 <!-- /._aty-category-list -->
                 <h2 class="entry-title">
@@ -58,13 +58,13 @@ get_header();
                 </div>
                 <!-- /._aty-read-more -->
             </div>
-            <!-- /._aty-col._aty-content-block -->
-            <div class="_aty-col _aty-featured-block">
+            <!-- /._aty-block._aty-content-block -->
+            <div class="_aty-block _aty-featured-block">
                 <figure class="_aty-featured-img">
                 </figure>
                 <!-- /._aty-featured-img -->
             </div>
-            <!-- /._aty-col._aty-featured-block -->
+            <!-- /._aty-block._aty-featured-block -->
         </article>
         <!-- /._aty-article -->
 

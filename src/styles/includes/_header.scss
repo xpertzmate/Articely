@@ -11,4 +11,29 @@
       }
     }
   }
+
+  ._aty-header-menu {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      padding: 10px 5px;
+
+      a {
+        color: #828484;
+        text-decoration: none;
+        font-size: 16px;
+
+        &:hover {
+          color: #474749;
+        }
+
+        &.current-menu-item {
+          color: #474749;
+        }
+
+      }
+
+    }
+  }
 }

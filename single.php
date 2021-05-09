@@ -58,7 +58,7 @@ if (have_posts()) :
                     <div class="_aty-related-articles">
 
                         <div class="_aty-related-wrapper">
-                            <div class="_aty-col">
+                            <div class="_aty-block">
                                 <figure class="_aty-featured-image"></figure>
                                 <!-- /._aty-featured-image -->
                                 <h3 class="entry-title"></h3>
@@ -73,7 +73,7 @@ if (have_posts()) :
                                 </div>
                                 <!-- /._aty-meta-info -->
                             </div>
-                            <!-- /._aty-col -->
+                            <!-- /._aty-block -->
                         </div>
                         <!-- /._aty-related-wrapper -->
 
