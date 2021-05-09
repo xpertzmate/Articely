@@ -16,7 +16,7 @@
         </div>
         <!-- /._aty-block -->
         <div class="_aty-block _aty-logo _aty-6">
-            <img src="//localhost:3000/wp-content/uploads/2021/05/Articely.svg" alt="Articely" class="_aty-img">
+            <img src="<?php echo ARTICELY_URL . '/assets/img/logo.svg'; ?>" alt="Articely" class="_aty-img">
         </div>
         <!-- /._aty-block -->
         <div class="_aty-block _aty-info _aty-3">
@@ -70,13 +70,7 @@
         </div>
         <!-- /._aty-logo -->
         <div class="_aty-search-form _aty-20-per">
-            <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
-                <label>
-                    <span class="screen-reader-text"><?php echo _x('Search for:', 'label') ?></span>
-                    <input type="search" class="search-field" placeholder="<?php echo esc_attr_x('Search …', 'placeholder') ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x('Search for:', 'label') ?>" />
-                </label>
-                <input type="submit" class="search-submit" value="<?php echo esc_attr_x('Search', 'submit button') ?>" />
-            </form>
+            <?php get_search_form(); ?>
         </div>
         <!-- /._aty-search-form -->
         <div class="_aty-menu-items _aty-70-per">
