@@ -67,7 +67,11 @@
 
     </div>
     <!-- /._aty-wrapper._aty-text-center -->
-    <div class="_aty-wrapper _aty-full-wrapper _aty-sticky">
+
+</footer>
+<!-- /._aty-site-footer -->
+
+<div class="_aty-full-wrapper _aty-fixed flex">
         <div class="_aty-logo _aty-5-per">
             <a href="" class="_aty-href">
                 <img src="<?php echo ARTICELY_URL . '/assets/img/favicon.svg'; ?>" alt="XpertzMate" class="_aty-img">
@@ -98,8 +102,6 @@
         <!-- /._aty-goto-top -->
     </div>
     <!-- /._aty-wrapper._aty-full-wrapper._aty-sticky -->
-</footer>
-<!-- /._aty-site-footer -->
 <?php wp_footer(); ?>
 </body>
 

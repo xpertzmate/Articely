@@ -46,33 +46,40 @@
       }
     }
 
-    .search-form {
+    ._aty-search-block{
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      align-content: center;
+      justify-content: flex-end;
+    }
 
-      label {
-        width: 100%;
-      }
 
-      .search-field {
-        border: none;
-        padding: 10px;
-        width: 100%;
-      }
+  }
+}
 
-      .search-submit {
-        border: none;
-        background: #474749;
-        padding: 5px 10px;
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 
-        img {
-          width: 20px;
-          display: block;
-          padding: 3px;
-        }
-      }
+  label {
+    width: 100%;
+  }
+
+  .search-field {
+    border: none;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .search-submit {
+    border: none;
+    background: #474749;
+    padding: 5px 10px;
+
+    img {
+      width: 20px;
+      display: block;
+      padding: 3px;
     }
   }
 }

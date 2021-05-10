@@ -7,11 +7,20 @@
     display: inline-block;
   }
 
-  ._aty-wrapper {
-    &._aty-full-wrapper {
-      &._aty-sticky {
-        background: #000;
+  
+}
+._aty-full-wrapper {
+  &._aty-fixed {
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    background: #000;
+
+    ._aty-goto-top{
+      img{
+        width: 30px;
       }
     }
   }
 }
+
