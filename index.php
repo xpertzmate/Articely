@@ -10,9 +10,16 @@ get_header();
 <section class="_aty-section">
     <?php if (have_posts()) : ?>
         <dev class="_aty-wrapper" data-id="_aty-articles-wrapper">
-            <?php while (have_posts()) : the_post(); ?>
+            <?php
+            $layout = 'head';
+            while (have_posts()) : the_post();
 
-            <?php endwhile; ?>
+                get_template_part('/template-parts/post/layout', $layout);
+
+                $layout = ($layout == 'head') ? 'tail' : 'head';
+
+            endwhile;
+            ?>
         </dev>
         <!-- /._aty-wrapper -->
         <div class="_aty-load-more">

@@ -46,12 +46,16 @@
       }
     }
 
-    ._aty-search-block{
+    ._aty-search-block {
       display: flex;
       justify-content: flex-end;
     }
 
 
+  }
+
+  ._aty-header-search-form {
+    display: none;
   }
 }
 

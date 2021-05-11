@@ -71,37 +71,37 @@
 </footer>
 <!-- /._aty-site-footer -->
 
-<div class="_aty-full-wrapper _aty-fixed flex">
-        <div class="_aty-logo _aty-5-per">
-            <a href="" class="_aty-href">
-                <img src="<?php echo ARTICELY_URL . '/assets/img/favicon.svg'; ?>" alt="XpertzMate" class="_aty-img">
-            </a>
-            <!-- /._aty-href -->
-        </div>
-        <!-- /._aty-logo -->
-        <div class="_aty-search-form _aty-20-per">
-            <?php get_search_form(); ?>
-        </div>
-        <!-- /._aty-search-form -->
-        <div class="_aty-menu-items _aty-70-per">
-            <?php
-            wp_nav_menu([
-                'container' => false,
-                'menu_id' => 'footer-menu',
-                'menu_class' => '_aty-footer-menu',
-                'theme_location' => 'footer'
-            ]);
-            ?>
-        </div>
-        <!-- /._aty-menu-items -->
-        <div class="_aty-goto-top _aty-5-per">
-            <a href="#" class="_aty-href">
-                <img src="<?php echo ARTICELY_URL . '/assets/img/gotop.svg'; ?>" alt="<?php echo get_bloginfo('name'); ?>" class="_aty-img">
-            </a>
-        </div>
-        <!-- /._aty-goto-top -->
+<div class="_aty-full-wrapper _aty-fixed flex _aty-footer-sticky-bar">
+    <div class="_aty-logo _aty-5-per center">
+        <a href="" class="_aty-href">
+            <img src="<?php echo ARTICELY_URL . '/assets/img/favicon.svg'; ?>" alt="XpertzMate" class="_aty-img">
+        </a>
+        <!-- /._aty-href -->
     </div>
-    <!-- /._aty-wrapper._aty-full-wrapper._aty-sticky -->
+    <!-- /._aty-logo -->
+    <div class="_aty-search-form _aty-20-per">
+        <?php get_search_form(); ?>
+    </div>
+    <!-- /._aty-search-form -->
+    <div class="_aty-menu-items _aty-70-per">
+        <?php
+        wp_nav_menu([
+            'container' => false,
+            'menu_id' => 'footer-menu',
+            'menu_class' => '_aty-footer-menu',
+            'theme_location' => 'footer'
+        ]);
+        ?>
+    </div>
+    <!-- /._aty-menu-items -->
+    <div class="_aty-goto-top _aty-5-per center">
+        <a href="#" class="_aty-href">
+            <img src="<?php echo ARTICELY_URL . '/assets/img/gotop.svg'; ?>" alt="<?php echo get_bloginfo('name'); ?>" class="_aty-img">
+        </a>
+    </div>
+    <!-- /._aty-goto-top -->
+</div>
+<!-- /._aty-wrapper._aty-full-wrapper._aty-sticky -->
 <?php wp_footer(); ?>
 </body>
 

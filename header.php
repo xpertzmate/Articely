@@ -47,9 +47,9 @@
             <!-- /._aty-block -->
         </div>
         <!-- /._aty-wrapper -->
-        <div class="_aty-wrapper" data-id="_aty-search-box">
+        <div class="_aty-wrapper _aty-header-search-form" data-id="_aty-search-box">
             <?php get_search_form(); ?>
         </div>
-        <!-- /._aty-wrapper -->
+        <!-- /._aty-wrapper._aty-header-search-form -->
     </header>
     <!-- /._aty-site-header -->
