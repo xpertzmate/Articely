@@ -61,8 +61,8 @@ function buildScript() {
 
 function buildStyle() {
     return (
-        src(`${paths.source}/styles/*.scss`)
-            .pipe(sass({fiber: Fiber}).on('error', sass.logError))
+        src([`${paths.source}/styles/*.scss`, `${paths.source}/styles/modules/*.scss`])
+            .pipe(sass({ fiber: Fiber }).on('error', sass.logError))
             .pipe(postcss([cssnano()]))
             .pipe(dest(`${paths.build}/styles`))
     );
@@ -76,7 +76,7 @@ function cleanup() {
 }
 
 function watching() {
-    watch([`${paths.source}/styles/*.scss`, `${paths.source}/styles/**/*.scss`], buildStyle )
+    watch([`${paths.source}/styles/*.scss`, `${paths.source}/styles/**/*.scss`], buildStyle)
     watch([`${paths.source}/scripts/*.js`, `${paths.source}/scripts/**/*.js`], buildScript)
 }
 

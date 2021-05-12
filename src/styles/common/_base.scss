@@ -1242,3 +1242,11 @@
 ._aty-wrapper {
   position: relative;
 }
+
+.wp-block-image {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}

@@ -11,27 +11,29 @@ if (have_posts()) :
 
     while (have_posts()) : the_post();
 ?>
-        <section class="_aty-section _aty-article">
+        <section class="_aty-section _aty-article-page">
             <article class="_aty-wrapper">
-                <header class="_aty-article-header">
-                    <h1 class="entry-title">
-                    </h1>
+                <header class="_aty-article-header center _aty-12">
+                    <h1 class="entry-title"><?php the_title(); ?></h1>
                     <!-- /.entry-title -->
-                    <ul class="_aty-category-list"></ul>
+                    <div class="_aty-category-list"><?php the_category('<span class="sep">|</span>'); ?></div>
                     <!-- /._aty-category-list -->
 
                     <span class="_aty-bar">&nbsp;</span>
 
                     <figure class="_aty-featured-img">
+                        <?php
+                        if (has_post_thumbnail()) :
+                            the_post_thumbnail('full', ['class' => 'img-responsive responsive--full _aty-img']);
+                        endif;
+                        ?>
                     </figure>
                     <!-- /._aty-featured-img -->
 
                     <div class="_aty-meta-info">
-                        <div class="_aty-author">
-                        </div>
+                        <div class="_aty-author"><img src="<?php echo ARTICELY_URL . "/assets/img/user-icon.svg"; ?>" alt="_aty-user-icon" class="_aty-img" /> <?php the_author(); ?></div>
                         <!-- /._aty-author -->
-                        <div class="_aty-pub-date">
-                        </div>
+                        <div class="_aty-pub-date"> <img src="<?php echo ARTICELY_URL . "/assets/img/calendar-icon.svg"; ?>" alt="_aty-user-icon" class="_aty-img" /> <time datetime="<?php the_date(); ?>"><?php the_date(); ?></time></div>
                         <!-- /._aty-pub-date -->
                     </div>
                     <!-- /._aty-meta-info -->
@@ -39,9 +41,7 @@ if (have_posts()) :
                 </header>
                 <!-- /._aty-article-header -->
 
-                <div class="entry-content">
-
-                </div>
+                <div class="entry-content"><?php the_content(); ?></div>
                 <!-- /.entry-content -->
 
                 <footer class="_aty-article-footer">
