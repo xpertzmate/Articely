@@ -1,48 +1,48 @@
 {
-  "name": "articely",
-  "version": "1.0.0",
-  "description": "2021 Wordpress Blogging Theme ",
-  "main": "index.js",
-  "dependencies": {
-    "fibers": "^5.0.0",
-    "gulp-cli": "^2.3.0",
-    "normalize-scss": "^7.0.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.14.0",
-    "@babel/preset-env": "^7.14.1",
-    "@babel/register": "^7.13.16",
-    "babelify": "^10.0.0",
-    "browser-sync": "^2.26.14",
-    "browserify": "^17.0.0",
-    "cssnano": "^5.0.2",
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^9.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-uglify": "^3.0.2",
-    "node-sass": "^5.0.0",
-    "postcss": "^8.2.14",
-    "require-globify": "^1.4.1",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
-  },
-  "scripts": {
-    "test": "gulp"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xpertzmate/Articely.git"
-  },
-  "keywords": [
-    "Blog",
-    "Wordpress",
-    "Theme"
-  ],
-  "author": "XpertzMate Team",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/xpertzmate/Articely/issues"
-  },
-  "homepage": "https://github.com/xpertzmate/Articely#readme"
+	"name": "your-project",
+	"description": "A WPGulp based project.",
+	"version": "0.0.1",
+	"repository": "ahmadawais/WPGulp",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.0.0",
+		"@babel/register": "^7.0.0",
+		"@babel/preset-env": "^7.12.1",
+		"beepbeep": "^1.2.2",
+		"browser-sync": "^2.11.1",
+		"eslint": "^7.12.0",
+		"eslint-config-wordpress": "^2.0.0",
+		"gulp": "^4.0.0",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-babel": "^8.0.0",
+		"gulp-cache": "^1.0.2",
+		"gulp-concat": "^2.5.2",
+		"gulp-filter": "^6.0.0",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-line-ending-corrector": "^1.0.1",
+		"gulp-merge-media-queries": "^0.2.1",
+		"gulp-notify": "^3.0.0",
+		"gulp-plumber": "^1.2.0",
+		"gulp-remember": "^1.0.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-rtlcss": "^1.2.0",
+		"gulp-sass": "^4.0.1",
+		"gulp-sort": "^2.0.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-uglify": "^3.0.0",
+		"gulp-uglifycss": "^1.0.6",
+		"gulp-wp-pot": "^2.0.7",
+		"gulp-zip": "^5.0.2"
+	},
+	"scripts": {
+		"start": "gulp",
+		"zip": "gulp zip",
+		"styles": "gulp styles",
+		"images": "gulp images",
+		"js-custom": "gulp customJS",
+		"js-vendors": "gulp vendorsJS",
+		"translate": "gulp translate",
+		"styles-rtl": "gulp stylesRTL",
+		"cache-clear": "gulp clearCache"
+	}
 }

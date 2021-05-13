@@ -1,12 +1,6 @@
-// @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Itim&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&family=Literata:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-// $indie: 'Indie Flower', cursive;
-// $itim: 'Itim',cursive;
-// $crimson: 'Crimson Text', serif;
-
 $harmattan: 'Harmattan', sans-serif;
 $literata: 'Literata', serif;
+$primaryColor:#e71d25;
+$secondaryColor:#f48889;
+$gradientPrimary: linear-gradient(to top, #e71d25, #e9272c, #ea3033, #ec383a, #ed3f40, #ef4948, #f15251, #f25a59, #f36665, #f47271, #f47d7d, #f48889);
+$gradientSecondary: linear-gradient(to top, #e71d25, #ed4140, #f25b59, #f47272, #f48889);

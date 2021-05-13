@@ -122,6 +122,9 @@ add_action('after_setup_theme', 'articely_setup');
 function articely_scripts()
 {
 
+    wp_enqueue_style('articely-fonts', 'https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&family=Literata:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', false);
+
+
     wp_enqueue_style('articely-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
     wp_enqueue_style('articely-app', ARTICELY_URL . '/assets/styles/global.css', array(), strtotime('now'));
 
@@ -216,3 +219,23 @@ add_filter('excerpt_more', function () {
 
     return '';
 });
+
+
+/**
+ * Add preconnect for Google Fonts.
+ *
+ * @param array  $urls           URLs to print for resource hints.
+ * @param string $relation_type  The relation type the URLs are printed.
+ * @return array $urls           URLs to print for resource hints.
+ */
+
+add_filter('wp_resource_hints', function ($urls, $relation_type) {
+    if ('preconnect' === $relation_type) {
+        $urls[] = array(
+            'href' => 'https://fonts.gstatic.com',
+            'crossorigin',
+        );
+    }
+
+    return $urls;
+}, 10, 2);
