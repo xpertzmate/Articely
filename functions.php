@@ -126,7 +126,7 @@ function articely_scripts()
 
 
     wp_enqueue_style('articely-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
-    wp_enqueue_style('articely-app', ARTICELY_URL . '/assets/styles/global.css', array(), strtotime('now'));
+    wp_enqueue_style('articely-app', ARTICELY_URL . '/assets/css/global.min.css', array(), strtotime('now'));
 
     if (is_single()) :
         wp_enqueue_style('articely-article', ARTICELY_URL . '/assets/styles/article.css', array(), strtotime('now'));

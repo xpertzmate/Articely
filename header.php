@@ -22,7 +22,7 @@
                     <!-- /._aty-href -->
                 </div>
                 <!-- /._aty-primary-logo -->
-         
+
             </div>
             <!-- /._aty-block -->
             <div class="_aty-block _aty-7">
@@ -53,3 +53,6 @@
         <!-- /._aty-wrapper._aty-header-search-form -->
     </header>
     <!-- /._aty-site-header -->
+    <section class="_aty-space-section">
+    </section>
+    <!-- /._aty-space-section -->
