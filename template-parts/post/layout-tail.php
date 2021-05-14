@@ -14,7 +14,13 @@
         </div>
         <!-- /.entry-excerpt -->
         <div class="_aty-read-more">
-            <a href="<?php the_permalink(); ?>" class="_aty-href">Read More <span class="_aty-link-arrow"> > </span></a>
+
+            <div class="_aty-box-button-holder">
+                <div class="_aty-box-frame"></div>
+                <a href="<?php the_permalink(); ?>" class="_aty-href">
+                    <label>Read More</label><img src="<?php echo ARTICELY_URL . '/assets/img/arrow.svg'; ?>" alt="Read More" class="_aty-box-arrow _aty-link-arrow">
+                </a>
+            </div>
         </div>
         <!-- /._aty-read-more -->
     </div>
