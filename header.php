@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <header class="_aty-site-header clearfix">
-        <div class="_aty-wrapper flex">
+        <div class="_aty-full-wrapper flex">
             <div class="_aty-block _aty-3">
                 <div class="_aty-primary-logo">
                     <?php

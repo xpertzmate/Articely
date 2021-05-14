@@ -9,7 +9,7 @@ get_header();
 
 <section class="_aty-section">
     <?php if (have_posts()) : ?>
-        <dev class="_aty-wrapper" data-id="_aty-articles-wrapper">
+        <div class="_aty-wrapper" data-id="_aty-articles-wrapper">
             <?php
             $layout = 'head';
             while (have_posts()) : the_post();
@@ -20,7 +20,7 @@ get_header();
 
             endwhile;
             ?>
-        </dev>
+        </div>
         <!-- /._aty-wrapper -->
         <div class="_aty-load-more">
             <label class="_aty-load-more-btn" id="_aty-load-more-btn">Load More</label>
