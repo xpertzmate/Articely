@@ -10,7 +10,10 @@
         <!-- /._aty-featured-img -->
     </div>
     <!-- /._aty-block._aty-featured-block -->
-    <div class="_aty-block _aty-content-block _aty-m-7 center">
+    <div class="_aty-grid-spacer _aty-m-2">
+    </div>
+    <!-- /._aty-grid-spacer -->
+    <div class="_aty-block _aty-content-block _aty-m-5 ">
         <div class="_aty-category-list"><?php the_category('<span class="sep">|</span>'); ?></div>
         <!-- /._aty-category-list -->
         <h2 class="entry-title">
