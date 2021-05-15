@@ -19,7 +19,10 @@ if (have_posts()) :
                     <div class="_aty-category-list"><?php the_category('<span class="sep">|</span>'); ?></div>
                     <!-- /._aty-category-list -->
 
-                    <span class="_aty-bar">&nbsp;</span>
+                    <div class="_aty-seprator">
+                        <span class="_aty-bar">&nbsp;</span>
+                    </div>
+                    <!-- /._aty-seprator -->
 
                     <figure class="_aty-featured-img">
                         <?php

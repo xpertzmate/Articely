@@ -23,6 +23,8 @@ const injectChanges = true;
 // Path to main .scss file.
 const styleSRC = './src/styles/*.scss';
 
+const styleModuleSRC = './src/styles/modules/*.scss';
+
 // Path to place the compiled CSS file. Default set to root folder.
 const styleDestination = './assets/css/';
 
@@ -141,6 +143,7 @@ module.exports = {
 	browserAutoOpen,
 	injectChanges,
 	styleSRC,
+	styleModuleSRC,
 	styleDestination,
 	outputStyle,
 	errLogToConsole,

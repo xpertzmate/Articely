@@ -1,15 +1,15 @@
 <footer class="_aty-site-footer">
-    <div class="_aty-wrapper">
+    <div class="_aty-wrapper flex">
         <div class="_aty-block _aty-info _aty-3">
             <div class="_aty-info-block">
                 <label>E-Mail</label>
-                <a href="mailto:help@articely.com">help@articely.com</a>
+                <a href="mailto:help@articely.com" class="_aty-href">help@articely.com</a>
             </div>
             <!-- /._aty-info-block -->
 
             <div class="_aty-info-block">
                 <label>Telephone</label>
-                <a href="tel:01465294888">(+91) 01465 - 294888 </a>
+                <a href="tel:01465294888" class="_aty-href">(+91) 01465 - 294888 </a>
             </div>
             <!-- /._aty-info-block -->
 
@@ -29,15 +29,15 @@
             <div class="_aty-info-block">
                 <label>Social Media</label>
                 <ul class="_aty-social-media-icon">
-                    <li class="_aty-icon"><a href="" class="_aty-href"><img src="" alt="" class="_aty-img"></a>
+                    <li class="_aty-icon"><a href="" class="_aty-href"><img src="<?php echo ARTICELY_URL . '/assets/img/facebook.svg'; ?>" alt="Facebook" class="_aty-img"></a>
                         <!-- /._aty-href -->
                     </li>
                     <!-- /._aty-icon -->
-                    <li class="_aty-icon"><a href="" class="_aty-href"><img src="" alt="" class="_aty-img"></a>
+                    <li class="_aty-icon"><a href="" class="_aty-href"><img src="<?php echo ARTICELY_URL . '/assets/img/twitter.svg'; ?>" alt="Twitter" class="_aty-img"></a>
                         <!-- /._aty-href -->
                     </li>
                     <!-- /._aty-icon -->
-                    <li class="_aty-icon"><a href="" class="_aty-href"><img src="" alt="" class="_aty-img"></a>
+                    <li class="_aty-icon"><a href="" class="_aty-href"><img src="<?php echo ARTICELY_URL . '/assets/img/instagram.svg'; ?>" alt="Instagram" class="_aty-img"></a>
                         <!-- /._aty-href -->
                     </li>
                     <!-- /._aty-icon -->
@@ -48,7 +48,7 @@
             <div class="_aty-info-block">
                 <div class="_aty-info-block">
                     <label>Signup</label>
-                    <input type="text" class="_aty-input-field" placeholder="enter your email" />
+                    <input type="text" class="_aty-input-field _aty-signup-form" placeholder="Enter Your Email" />
                 </div>
                 <!-- /._aty-info-block -->
             </div>

@@ -12,26 +12,20 @@ if (have_posts()) :
     while (have_posts()) : the_post();
 ?>
         <section class="_aty-section _aty-page">
-            <dev class="_aty-wrapper">
+            <div class="_aty-wrapper">
                 <header class="_aty-page-header">
-                    <h1 class="entry-title">
-                    </h1>
+                    <h1 class="entry-title"><?php the_title(); ?></h1>
                     <!-- /.entry-title -->
+                    <span class="_aty-bar">&nbsp;</span>
                 </header>
                 <!-- /._aty-page-header -->
 
-                <div class="entry-content">
-
+                <div class="entry-content py4">
+                    <?php the_content(); ?>
                 </div>
                 <!-- /.entry-content -->
-
-                <footer class="_aty-page-footer">
-                </footer>
-                <!-- /._aty-page-footer -->
-
-            </dev>
+            </div>
             <!-- /._aty-wrapper -->
-
         </section>
         <!-- /._aty-section._aty-page -->
 <?php

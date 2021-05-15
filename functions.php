@@ -129,7 +129,7 @@ function articely_scripts()
     wp_enqueue_style('articely-app', ARTICELY_URL . '/assets/css/global.min.css', array(), strtotime('now'));
 
     if (is_single()) :
-        wp_enqueue_style('articely-article', ARTICELY_URL . '/assets/styles/article.css', array(), strtotime('now'));
+        wp_enqueue_style('articely-article', ARTICELY_URL . '/assets/css/article.min.css', array(), strtotime('now'));
     endif;
 
     // wp_enqueue_script('iac-modernizr-script', ARTICELY_URL . '/assets/js/modernizr.js', array('jquery'), wp_get_theme()->get('Version'), true);

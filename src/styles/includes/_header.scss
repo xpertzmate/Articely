@@ -3,6 +3,7 @@
 	display: block;
 	width: 100%;
 	padding: 10px 0px;
+
 	._aty-primary-logo {
 		._aty-href {
 			._aty-img {
@@ -12,7 +13,7 @@
 		}
 	}
 
-	._aty-block{
+	._aty-block {
 		padding-right: 15px;
 		padding-left: 15px;
 	}
@@ -20,35 +21,35 @@
 	._aty-header-menu {
 		list-style: none;
 
-		UL{
-			padding: 0px;
-			margin: 0px;
-			li {
-				display: inline-block;
-				padding: 0px 20px;
-				
-				&:first-child{
-					padding-left: 0px;
+		
+		padding: 0px;
+		margin: 0px;
+
+		li {
+			display: inline-block;
+			padding: 0px 20px;
+
+			&:first-child {
+				padding-left: 0px;
+			}
+
+
+			&:last-child {
+				padding-right: 0px;
+			}
+
+			a {
+				// color: #828484;
+				color: #222222;
+				text-decoration: none;
+				font-size: 16px;
+
+				&:hover {
+					color: #474749;
 				}
 
-				
-				&:last-child{
-					padding-right: 0px;
-				}
-
-				a {
-					// color: #828484;
-					color: #222222;
-					text-decoration: none;
-					font-size: 16px;
-	
-					&:hover {
-						color: #474749;
-					}
-	
-					&.current-menu-item {
-						color: #474749;
-					}
+				&.current-menu-item {
+					color: #474749;
 				}
 			}
 		}

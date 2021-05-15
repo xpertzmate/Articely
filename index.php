@@ -23,7 +23,13 @@ get_header();
         </div>
         <!-- /._aty-wrapper -->
         <div class="_aty-load-more">
-            <label class="_aty-load-more-btn" id="_aty-load-more-btn">Load More</label>
+            <div class="_aty-box-button-holder _aty-btn-secondary _aty-load-more-btn" id="_aty-load-more-btn">
+                <div class="_aty-box-frame"></div>
+                <a href="#" class="_aty-href">
+                    <label>Load More</label><img src="<?php echo ARTICELY_URL . '/assets/img/arrow-1.svg'; ?>" alt="Read More" class="_aty-box-arrow _aty-link-arrow">
+                </a>
+            </div>
+
         </div>
         <!-- /._aty-load-more -->
     <?php

@@ -1,66 +1,77 @@
 .single {
 
-  ._aty-article-page {
-    ._aty-article-header {
-      max-width: 1120px;
-      padding: 15px;
-      margin: 0 auto;
+	._aty-article-page {
+		._aty-article-header {
+			max-width: 1120px;
+			padding: 15px;
+			margin: 0 auto;
 
-      .entry-title {
-        font-size: 34px;
-      }
+			.entry-title {
+				font-size: 34px;
+			}
 
-      ._aty-category-list {
-        a {
-          color: #f48889;
-          text-decoration: none;
-          font-weight: 500;
+			._aty-category-list {
+				a {
+					color: #f48889;
+					text-decoration: none;
+					font-weight: 500;
 
-          &:hover {
-            color: #e71d25;
-          }
-        }
+					&:hover {
+						color: #e71d25;
+					}
+				}
 
-        .sep {
-          color: #e71d25;
-          font-weight: bold;
-          padding: 0px 10px;
-        }
-      }
+				.sep {
+					color: #e71d25;
+					font-weight: bold;
+					padding: 0px 10px;
+				}
+			}
 
-      ._aty-featured-img {
-        margin: 0px;
-        padding: 0px;
+			._aty-seprator {
+				display: block;
+				width: 100%;
+				margin: 30px 0px;
 
-        img {
-          max-width: 100%;
-          height: auto;
-        }
-      }
-
-      ._aty-meta-info {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
-      }
-    }
+				._aty-bar {
+					margin: 0 auto;
+				}
+			}
 
 
+			._aty-featured-img {
+				margin: 0px;
+				padding: 0px;
 
-    .entry-content {
-      padding: 15px;
-      max-width: 1120px;
-      width: 100%;
-      margin: 0 auto;
-    }
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
 
-    ._aty-article-footer {
-      padding: 15px;
-      max-width: 1120px;
-      width: 100%;
-      margin: 0 auto;
-    }
-  }
+			._aty-meta-info {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				align-items: center;
+				align-content: center;
+			}
+		}
+
+
+
+		.entry-content {
+			padding: 15px;
+			max-width: 1120px;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		._aty-article-footer {
+			padding: 15px;
+			max-width: 1120px;
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
 }
