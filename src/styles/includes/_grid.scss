@@ -1,12 +1,5 @@
 ._aty-article {
 	display: flex;
-	// background: #F8F8F8;
-	// &:first-child {
-	// 	border-top: 1px solid #bbb;
-	// }
-	// border-bottom: 1px solid #bbb;
-	padding: 10px;
-	margin-bottom: 50px;
 
 	._aty-featured-block {
 		position: relative;
@@ -19,7 +12,7 @@
 			border-radius: 10px;
 			box-shadow: inset 0 0 0 1px #ebebf0, 0 5px 20px 0 rgba(0, 0, 0, 92%);
 			transition: box-shadow .3s ease;
-
+			margin: 0px;
 			._aty-img {
 				max-width: 100%;
 				height: auto;
@@ -28,22 +21,20 @@
 	}
 
 	._aty-content-block {
-		padding-top: 10px;
-		padding-bottom: 10px;
 
 		._aty-category-list {
 			a {
 				color: #f48889;
 				text-decoration: none;
 				font-weight: 500;
-
+				font-size: 14px;
 				&:hover {
 					color: #e71d25;
 				}
 			}
 
 			.sep {
-				color: #e71d25;
+				color: #a7a7a7;
 				font-weight: bold;
 				padding: 0px 10px;
 			}
@@ -52,32 +43,30 @@
 
 
 		.entry-title {
-			text-transform: uppercase;
+			text-transform: capitalize;
 			//color: #48525C;
-			color: #010204;
-
+			color: #3c3c3c;
+			margin: 10px 0px;
 
 			._aty-bar {
-				width: 80px;
-				height: 1px;
+				width: 90px;
+				height: 2px;
 				border: 0;
-				margin: 15px auto;
+				margin: 15px 0px;
 				display: block;
-				background-color: #bbb;
+				background-color: #f48889;
 			}
 		}
 
 		.entry-excerpt {
 			// color: #828484;
 			color: #7f838b;
-			padding: 5px 20px;
+			padding: 0px;
 			line-height: 24px;
 
 			p {
 				color: #7f838b;
 				line-height: 24px;
-				max-width: 676px;
-				margin: 0 auto;
 				padding-bottom: 20px;
 			}
 
@@ -105,12 +94,11 @@
 
 		._aty-read-more {
 			width: 100%;
-			text-align: center;
 
 			._aty-box-button-holder {
 				position: relative;
 				max-width: 200px;
-				margin: 0 auto;
+
 
 				._aty-box-frame {
 					position: absolute;

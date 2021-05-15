@@ -1,5 +1,5 @@
-<article <?php post_class('_aty-article'); ?> id="_aty-article-<?php the_ID(); ?>">
-    <div class="_aty-block _aty-featured-block _aty-m-5">
+<article <?php post_class('_aty-article py4'); ?> id="_aty-article-<?php the_ID(); ?>">
+    <div class="_aty-block _aty-featured-block _aty-m-6">
         <figure class="_aty-featured-img">
             <?php if (has_post_thumbnail()) : ?>
                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
@@ -10,10 +10,7 @@
         <!-- /._aty-featured-img -->
     </div>
     <!-- /._aty-block._aty-featured-block -->
-    <div class="_aty-grid-spacer _aty-m-2">
-    </div>
-    <!-- /._aty-grid-spacer -->
-    <div class="_aty-block _aty-content-block _aty-m-5 ">
+    <div class="_aty-block _aty-content-block _aty-m-6 pl4">
         <div class="_aty-category-list"><?php the_category('<span class="sep">|</span>'); ?></div>
         <!-- /._aty-category-list -->
         <h2 class="entry-title">

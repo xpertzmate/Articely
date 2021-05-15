@@ -6,11 +6,9 @@
   ._aty-block {
     display: inline-block;
   }
-
 }
 
 ._aty-footer-sticky-bar {
-
   position: fixed;
   bottom: 0;
   align-items: center;
@@ -39,26 +37,23 @@
   ._aty-menu-items {
     ._aty-footer-menu {
       list-style: none;
-      display: inline-block;
-
-      li {
-        &.menu-item {
-          display: inline-block;
+      ul {
+        padding-left: 0px;
+        display: flex;
+        justify-content: space-around;
+        li {
+          list-style: none;
 
           a {
             display: block;
             color: white;
             text-decoration: none;
             padding: 0px 10px;
+            text-decoration: none;
           }
-
         }
-
       }
-
-
     }
-
   }
 
   ._aty-goto-top {
@@ -67,6 +62,4 @@
       max-width: 20px;
     }
   }
-
-
 }
