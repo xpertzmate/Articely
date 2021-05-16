@@ -1,6 +1,5 @@
 ._aty-article {
 	display: flex;
-
 	._aty-featured-block {
 		position: relative;
 		transition: transform .3s ease;
@@ -8,15 +7,16 @@
 		._aty-featured-img {
 			overflow: hidden;
 			position: relative;
-			background-color: #fff;
 			border-radius: 10px;
-			box-shadow: inset 0 0 0 1px rgba(235, 235, 240, 10%), 0 5px 20px 0 rgba(0, 0, 0, 12%);
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			transition: box-shadow .3s ease;
 			margin: 0px;
-
+			a{
+				display: flex;
+			}
 			._aty-img {
-				max-width: 100%;
-				height: auto;
+				width: 100%;
+				height: 100%;
 			}
 		}
 	}
