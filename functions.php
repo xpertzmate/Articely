@@ -125,25 +125,22 @@ function articely_scripts()
     wp_enqueue_style('articely-fonts', 'https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&family=Literata:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', false);
 
 
-    wp_enqueue_style('articely-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
+    wp_enqueue_style('articely-style', get_stylesheet_uri(), array(), strtotime('now'));
     wp_enqueue_style('articely-app', ARTICELY_URL . '/assets/css/global.min.css', array(), strtotime('now'));
 
     if (is_single()) :
         wp_enqueue_style('articely-article', ARTICELY_URL . '/assets/css/article.min.css', array(), strtotime('now'));
     endif;
 
-    // wp_enqueue_script('iac-modernizr-script', ARTICELY_URL . '/assets/js/modernizr.js', array('jquery'), wp_get_theme()->get('Version'), true);
-    // wp_enqueue_script('iac-vender-script', ARTICELY_URL . '/assets/js/vendor.js', array('jquery'), wp_get_theme()->get('Version'), true);
-    // wp_enqueue_script('iac-script', ARTICELY_URL . '/assets/js/app.js', array('jquery'), wp_get_theme()->get('Version'), true);
-    // wp_localize_script(
-    // 	'iac-script',
-    // 	'iacData',
-    // 	[
-    // 		'ajaxurl' => admin_url('admin-ajax.php'),
-    // 		'security' =>  wp_create_nonce('iac-security'),
-    // 		'loginRedirect' =>  esc_url(home_url('/'))
-    // 	]
-    // );
+    wp_enqueue_script('articely-script', ARTICELY_URL . '/assets/js/global.min.js', array('jquery'), strtotime('now'), true);
+    wp_localize_script(
+        'articely-script',
+        'atyData',
+        [
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'security' =>  wp_create_nonce('aty-security')
+        ]
+    );
 }
 add_action('wp_enqueue_scripts', 'articely_scripts');
 

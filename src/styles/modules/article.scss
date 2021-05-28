@@ -1,13 +1,12 @@
+@import "./../common/variables";
+@import "./../common/mixins";
+
 .single {
 	._aty-article-page {
 		._aty-article-header {
 			max-width: 1120px;
 			padding: 15px;
 			margin: 0 auto;
-
-			.entry-title {
-				font-size: 34px;
-			}
 
 			._aty-category-list {
 				a {
@@ -51,17 +50,56 @@
 			._aty-meta-info {
 				display: flex;
 				width: 100%;
-				justify-content: space-between;
-				align-items: center;
-				align-content: center;
+				padding: 10px 15px;
+				flex-wrap: wrap;
 
 				._aty-author {
-					margin-right: 15px;
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+					align-content: center;
+
+					.byline {
+						font-weight: 500;
+
+						a {
+							font-weight: normal;
+							text-decoration: none;
+							color: $color-3;
+						}
+					}
+
+				}
+
+				._aty-pub-date {
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+					align-content: center;
+
+					.posted-on {
+						font-weight: 500;
+
+						time {
+							font-weight: normal;
+							text-decoration: none;
+							color: $color-3;
+						}
+
+						@include breakpoint(tablet) {
+							text-align: right;
+
+						}
+					}
 				}
 
 				img {
 					width: 22px;
 					height: auto;
+
+					&._aty-img {
+						margin-right: 5px;
+					}
 				}
 			}
 		}

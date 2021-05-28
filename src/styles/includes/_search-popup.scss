@@ -1,0 +1,36 @@
+._aty-search-popup {
+	display: none;
+	@include transition(all, 0.5s, ease);
+
+	&._aty-active {
+		position: fixed;
+		@include rgbaColor(#000, 0.8);
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		z-index: 9999;
+		display: flex;
+		align-items: center;
+		align-content: center;
+	}
+
+
+	._aty-header-search-form {
+		max-width: 420px;
+
+		.search-form {
+			.search-field {
+				background: transparent;
+				border-bottom: 1px solid $color-4;
+				font-size: 18px;
+				color: $color-4;
+			}
+
+			.search-submit {
+				border-radius: 100%;
+				padding: 5px 10px;
+			}
+		}
+	}
+}

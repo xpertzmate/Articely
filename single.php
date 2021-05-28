@@ -34,8 +34,8 @@ if (have_posts()) :
                     <!-- /._aty-featured-img -->
 
                     <div class="_aty-meta-info">
-                        <div class="_aty-author"><?php articely_posted_by(); ?></div> <!-- /._aty-author -->
-                        <div class="_aty-pub-date"> <?php articely_posted_on(); ?></div><!-- /._aty-pub-date -->
+                        <div class="_aty-author _aty-6"><?php articely_posted_by(); ?></div> <!-- /._aty-author -->
+                        <div class="_aty-pub-date _aty-6"> <?php articely_posted_on(); ?></div><!-- /._aty-pub-date -->
                     </div>
                     <!-- /._aty-meta-info -->
 

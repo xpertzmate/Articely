@@ -1,5 +1,21 @@
+<?php
+
+/**
+ * Search Form
+ */
+get_template_part('template-parts/search', 'popup');
+
+/**
+ * Mobile Menu
+ */
+if (wp_is_mobile()) :
+    get_template_part('template-parts/search', 'popup');
+endif;
+?>
+
 <footer class="_aty-site-footer">
-    <div class="_aty-wrapper flex">
+    <div class="_aty-full-wrapper">
+
         <div class="_aty-block _aty-info _aty-3">
             <div class="_aty-info-block">
                 <label>E-Mail</label>
@@ -55,10 +71,10 @@
             <!-- /._aty-info-block -->
         </div>
         <!-- /._aty-block -->
-    </div>
-    <!-- /._aty-wrapper -->
-    <div class="_aty-wrapper _aty-text-center">
 
+    </div>
+
+    <div class="_aty-copyright-wrapper">
         <div class="_aty-copyright">
             <label> &copy; <?php echo date("Y"); ?> Articely.</label>
             <label> <a href="https://www.xpertzmate.com" title="XpertzMate | ">www.xpertzmate.com</a> </label>
@@ -66,24 +82,24 @@
         <!-- /._aty-copyright -->
 
     </div>
-    <!-- /._aty-wrapper._aty-text-center -->
+    <!-- /._aty-wrapper-->
 
 </footer>
 <!-- /._aty-site-footer -->
 
-<div class="_aty-full-wrapper _aty-fixed flex _aty-footer-sticky-bar">
-    <div class="_aty-logo _aty-5-per center">
+<div class="_aty-full-wrapper _aty-fixed _aty-footer-sticky-bar">
+    <div class="_aty-logo _aty-1 center">
         <a href="" class="_aty-href">
             <img src="<?php echo ARTICELY_URL . '/assets/img/favicon.svg'; ?>" alt="XpertzMate" class="_aty-img">
         </a>
         <!-- /._aty-href -->
     </div>
     <!-- /._aty-logo -->
-    <div class="_aty-search-form _aty-20-per">
+    <div class="_aty-search-form _aty-3">
         <?php get_search_form(); ?>
     </div>
     <!-- /._aty-search-form -->
-    <div class="_aty-menu-items _aty-70-per">
+    <div class="_aty-menu-items _aty-7">
         <?php
         wp_nav_menu([
             'container' => false,
@@ -94,7 +110,7 @@
         ?>
     </div>
     <!-- /._aty-menu-items -->
-    <div class="_aty-goto-top _aty-5-per center">
+    <div class="_aty-goto-top _aty-1 center">
         <a href="#" class="_aty-href">
             <img src="<?php echo ARTICELY_URL . '/assets/img/gotop.svg'; ?>" alt="<?php echo get_bloginfo('name'); ?>" class="_aty-img">
         </a>

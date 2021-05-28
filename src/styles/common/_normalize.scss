@@ -21,14 +21,23 @@ html {
 /**
    * Remove the margin in all browsers.
    */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0px;
+}
 
 body {
 	margin: 0;
+	padding: 0px;
+	width: 100%;
 	font-size: 16px;
-	line-height: normal;
+	line-height: 30px;
 	font-family: $literata;
 	background: #f0f0f0;
+	color: #444749;
 	overflow-x: hidden;
+	box-sizing: border-box;
 }
 
 /**
@@ -44,15 +53,57 @@ main {
    * `article` contexts in Chrome, Firefox, and Safari.
    */
 
+
+
 h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-	font-family: $harmattan;
+	font-size: 1.5rem;
+	font-family: $literata;
+
+	@include breakpoint(tablet) {
+		font-size: 2rem;
+	}
+
+	margin-bottom: 0.5rem;
 }
 
 h2 {
-	font-size: 1.8em;
+	font-size: 1.5rem;
 	font-family: $harmattan;
+	margin-bottom: 0.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	font-family: $harmattan;
+	margin-bottom: 0.5rem;
+}
+
+h4 {
+	font-size: 1rem;
+	font-family: $harmattan;
+	margin-bottom: 0.5rem;
+}
+
+h5 {
+	font-size: .875rem;
+	font-family: $harmattan;
+	margin-bottom: 0.5rem;
+}
+
+h6 {
+	font-size: .75rem;
+	font-family: $harmattan;
+	margin-bottom: 0.5rem;
+}
+
+p {
+	margin-bottom: 0.5rem;
+}
+
+a {
+	text-decoration: none;
+	color: $color-4;
+	font-weight: normal;
 }
 
 /* Grouping content
@@ -170,6 +221,7 @@ sup {
 
 img {
 	border-style: none;
+	max-width: 100%;
 }
 
 /* Forms

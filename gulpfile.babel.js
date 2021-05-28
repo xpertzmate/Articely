@@ -301,7 +301,7 @@ gulp.task('vendorsJS', () => {
  */
 gulp.task('customJS', () => {
 	return gulp
-		.src(config.jsCustomSRC, { since: gulp.lastRun('customJS') }) // Only run on changed files.
+		.src([config.jsCustomSRC, './src/scripts/functions/*.js'], { since: gulp.lastRun('customJS') }) // Only run on changed files.
 		.pipe(plumber(errorHandler))
 		.pipe(
 			babel({

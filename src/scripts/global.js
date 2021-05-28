@@ -1,8 +1,8 @@
 (function ($) {
 
-    jQuery(document).ready(function () {
-        
+    $(document).ready(function () {
 
+        _ATY_HEADER.init();
     });
 
     // Run right away
