@@ -1,3 +1,21 @@
 @import 'variables';
+@import 'mixins';
 @import 'normalize';
 @import 'base';
+
+
+//Title Color
+.entry-title {
+	color: $color-3;
+	font-family: $literata;
+}
+
+//Seprator
+._aty-bar {
+	width: 90px;
+	height: 2px;
+	border: 0;
+	margin: 15px 0px;
+	display: block;
+	background-color: $color-4;
+}

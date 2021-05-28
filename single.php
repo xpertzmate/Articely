@@ -34,10 +34,8 @@ if (have_posts()) :
                     <!-- /._aty-featured-img -->
 
                     <div class="_aty-meta-info">
-                        <div class="_aty-author"><img src="<?php echo ARTICELY_URL . "/assets/img/user-icon.svg"; ?>" alt="_aty-user-icon" class="_aty-img" /> <?php the_author(); ?></div>
-                        <!-- /._aty-author -->
-                        <div class="_aty-pub-date"> <img src="<?php echo ARTICELY_URL . "/assets/img/calendar-icon.svg"; ?>" alt="_aty-user-icon" class="_aty-img" /> <time datetime="<?php the_date(); ?>"><?php the_date(); ?></time></div>
-                        <!-- /._aty-pub-date -->
+                        <div class="_aty-author"><?php articely_posted_by(); ?></div> <!-- /._aty-author -->
+                        <div class="_aty-pub-date"> <?php articely_posted_on(); ?></div><!-- /._aty-pub-date -->
                     </div>
                     <!-- /._aty-meta-info -->
 

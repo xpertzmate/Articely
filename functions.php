@@ -239,3 +239,6 @@ add_filter('wp_resource_hints', function ($urls, $relation_type) {
 
     return $urls;
 }, 10, 2);
+
+//Template Tags
+require_once ARTICELY_PATH . "/inc/template-tags.php";
