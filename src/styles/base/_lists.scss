@@ -1,0 +1,45 @@
+ul,
+ol {
+    margin-left: $base-spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
+}
+
+.list--unstyled {
+    margin-left: 0;
+    list-style: none;
+}
+
+
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  
+    ul {
+      a {
+        font-size: 0.9em !important;
+        padding-left: 30px !important;
+        background: #6d7fcc;
+      }
+    }
+  }
+  
+  li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+  
+  ol {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+

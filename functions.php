@@ -1,27 +1,5 @@
 <?php
 
-if (!defined('ARTICELY_URL')) :
-    define('ARTICELY_URL', get_template_directory_uri());
-endif;
-
-if (!defined('ARTICELY_PATH')) :
-    define('ARTICELY_PATH', get_template_directory());
-endif;
-
-/**
- * Function for debugging
- */
-if (!function_exists('_debug')) :
-    function _debug($data,  $die = false)
-    {
-        echo "<pre class='_articely_debug_data'>";
-        print_r($data);
-        echo "</pre>";
-
-        ($die) ? die : '';
-    }
-endif;
-
 /**
  * Functions and definitions
  *
@@ -58,8 +36,8 @@ if (!function_exists('articely_setup')) {
 
         register_nav_menus(
             array(
-                'header' => esc_html__('Header menu', 'iac'),
-                'footer'  => __('Footer menu', 'iac'),
+                'header' => esc_html__('Header menu', 'articely'),
+                'footer'  => __('Footer menu', 'articely'),
             )
         );
 
@@ -107,14 +85,25 @@ if (!function_exists('articely_setup')) {
 
         // Add support for experimental link color control.
         add_theme_support('experimental-link-color');
+
+        //Hide Admin Bar From Frontend
+        show_admin_bar(false);
     }
 }
 add_action('after_setup_theme', 'articely_setup');
 
+(defined('ATY_URL')) || define('ATY_URL', trailingslashit(get_template_directory_uri()));
+(defined('ATY_PATH')) || define('ATY_PATH', trailingslashit(get_template_directory()));
+(defined('ATY_SHORTCODE')) || define('ATY_SHORTCODE', trailingslashit(ATY_PATH . '/includes/shortcodes'));
+
+
+require_once ATY_PATH . 'includes/helpers/index.php';
+require_once ATY_PATH . 'includes/template-tags.php';
+require_once ATY_PATH . 'includes/shortcodes/index.php';
+
 
 /**
  * Enqueue scripts and styles.
- *
  * @since Articely 1.0
  *
  * @return void
@@ -122,25 +111,15 @@ add_action('after_setup_theme', 'articely_setup');
 function articely_scripts()
 {
 
-    wp_enqueue_style('articely-fonts', 'https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&family=Literata:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', false);
+    wp_enqueue_style('aty-fonts', articely_font_url(), [], false);
+    wp_enqueue_style('aty-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
 
 
-    wp_enqueue_style('articely-style', get_stylesheet_uri(), array(), strtotime('now'));
-    wp_enqueue_style('articely-app', ARTICELY_URL . '/assets/css/global.min.css', array(), strtotime('now'));
+    wp_enqueue_style('load-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+    wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap', false);
 
-    if (is_single()) :
-        wp_enqueue_style('articely-article', ARTICELY_URL . '/assets/css/article.min.css', array(), strtotime('now'));
-    endif;
-
-    wp_enqueue_script('articely-script', ARTICELY_URL . '/assets/js/global.min.js', array('jquery'), strtotime('now'), true);
-    wp_localize_script(
-        'articely-script',
-        'atyData',
-        [
-            'ajaxurl' => admin_url('admin-ajax.php'),
-            'security' =>  wp_create_nonce('aty-security')
-        ]
-    );
+    wp_enqueue_style('aty-app', ATY_URL . 'build/styles/main.css', array(), strtotime('now'));
+    wp_enqueue_script('aty-app', ATY_URL . 'build/scripts/build.min.js', array('jquery'), strtotime('now'), true);
 }
 add_action('wp_enqueue_scripts', 'articely_scripts');
 
@@ -237,5 +216,30 @@ add_filter('wp_resource_hints', function ($urls, $relation_type) {
     return $urls;
 }, 10, 2);
 
-//Template Tags
-require_once ARTICELY_PATH . "/inc/template-tags.php";
+
+
+
+/**
+ * Admin Block CSS
+ */
+function aty___render_block_style()
+{
+    echo '<style>
+    .wp-block{
+        border: 1px solid #c1c1c1;
+        padding:5px;
+    } 
+  </style>';
+}
+add_action('admin_head', 'aty___render_block_style');
+
+
+
+/*Contact form 7 remove span*/
+add_filter('wpcf7_form_elements', function ($content) {
+    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+    $content = str_replace('<br />', '', $content);
+
+    return $content;
+});

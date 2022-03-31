@@ -1,0 +1,114 @@
+._header {
+  position: absolute;
+  top: 20px;
+  z-index: 99;
+
+  @include resp-min($breakpoint-sm) {
+    top: 30px;
+  }
+
+  .aty__logo {
+    float: left;
+
+    img {
+      width: 200px;
+      @include resp-min($breakpoint-sm) {
+        width: 250px;
+      }
+    }
+  }
+
+  ._menu {
+    width: 30px;
+    float: right;
+    cursor: pointer;
+    margin-top: 10px;
+
+    @include resp-min($breakpoint-sm) {
+      margin-top: 0;
+      width: 40px;
+    }
+
+    span {
+      width: 30px;
+      height: 3px;
+      border-radius: 10px;
+      background: $white;
+      display: block;
+      margin-bottom: 8px;
+
+      @include resp-min($breakpoint-sm) {
+        width: 40px;
+        height: 4px;
+      }
+    }
+  }
+}
+
+.aty__nav {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  .aty__logo {
+    position: absolute;
+    left: 9px;
+    top: 20px;
+
+    @include resp-min($breakpoint-md) {
+      left: 10px;
+    }
+
+    img {
+      max-width: 200px;
+    }
+  }
+
+  ._close {
+    position: absolute;
+    right: 8px;
+    top: 24px;
+    cursor: pointer;
+    max-width: 37px;
+
+    @include resp-min($breakpoint-md) {
+      right: 91px;
+    }
+  }
+
+  .aty__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    height: 100%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      li {
+        margin: 15px 0;
+
+        a {
+          text-transform: uppercase;
+          font-size: 24px;
+          color: $white;
+
+          @include resp-min($breakpoint-md) {
+            font-size: 32px;
+          }
+
+          &:hover {
+            color: $brand-color;
+          }
+        }
+      }
+    }
+  }
+}

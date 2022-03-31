@@ -1,0 +1,66 @@
+/**
+ * Colours
+ */
+
+$base-colour: rgb(48, 48, 48);
+$base-background-colour: #f7f7f7;
+
+$brand-color: #d5902a; // Example
+$secondary-color: #f38688;
+
+$success-colour: #5cb85c;
+$warning-colour: #f0ad4e;
+$danger-colour: #e61e25;
+$white: #ffffff;
+$blue: #182430;
+$grey: #f9f9f9;
+$dark-grey: #d8e0e2;
+$black-bg: #000000;
+/**
+ * Typography
+ */
+
+$primary-font: "Laila", sans-serif;
+$secondary-font: "Sumana", serif;
+$special-font: "Amita", cursive;
+$english-font: "Laila", sans-serif;
+
+$base-font-size: 18;
+$base-line-height: 2;
+$base-spacing-unit: ($base-font-size * $base-line-height) * 1px;
+
+/**
+ * Breakpoints
+ */
+
+$breakpoint-lg: 1280px;
+$breakpoint-md: 1024px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 480px;
+
+$breakpoints: (
+    "lg" "(min-width: " + ($breakpoint-md + 1) + ")",
+    "md" "(min-width: " + ($breakpoint-sm + 1) + ") and (max-width: " + $breakpoint-md + ")",
+    "sm" "(min-width: " + ($breakpoint-xs + 1) + ") and (max-width:" + $breakpoint-sm + ")",
+    "xs" "(max-width: " + $breakpoint-xs + ")"
+);
+
+/**
+ * Grid
+ */
+
+$grid-max-width: 1200px;
+$grid-small-width: 95%;
+$grid-columns: 12;
+
+/**
+ * Components
+ */
+
+$border-radius: 3px;
+
+/**
+ * Animations
+ */
+$animation-speed: 250ms;
+$animation: ease-in-out;

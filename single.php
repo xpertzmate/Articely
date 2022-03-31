@@ -1,93 +1,56 @@
 <?php
 
 /**
- * Template For Blog List
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twenty_One
+ * @since Twenty Twenty-One 1.0
  */
 
 get_header();
 
-
 if (have_posts()) :
 
-    while (have_posts()) : the_post();
+    // Load posts loop.
+    while (have_posts()) :
+        the_post();
 ?>
-        <section class="_aty-section _aty-article-page">
-            <article class="_aty-wrapper">
-                <header class="_aty-article-header center _aty-12">
-                    <h1 class="entry-title"><?php the_title(); ?></h1>
-                    <!-- /.entry-title -->
-                    <div class="_aty-category-list"><?php the_category('<span class="sep">|</span>'); ?></div>
-                    <!-- /._aty-category-list -->
 
-                    <div class="_aty-seprator">
-                        <span class="_aty-bar">&nbsp;</span>
+        <section class="aty__block-wrapper aty__banner--inner" style="background-image: url(<?php echo articely_post_thumbnail_url(get_the_ID()); ?>);">
+            <div class="container">
+                <div class="row">
+                    <div class="inner-heading">
+                        <h1><?php the_title(); ?></h1>
                     </div>
-                    <!-- /._aty-seprator -->
-
-                    <figure class="_aty-featured-img">
-                        <?php
-                        if (has_post_thumbnail()) :
-                            the_post_thumbnail('full', ['class' => 'img-responsive responsive--full _aty-img']);
-                        endif;
-                        ?>
-                    </figure>
-                    <!-- /._aty-featured-img -->
-
-                    <div class="_aty-meta-info">
-                        <div class="_aty-author _aty-6"><?php articely_posted_by(); ?></div> <!-- /._aty-author -->
-                        <div class="_aty-pub-date _aty-6"> <?php articely_posted_on(); ?></div><!-- /._aty-pub-date -->
-                    </div>
-                    <!-- /._aty-meta-info -->
-
-                </header>
-                <!-- /._aty-article-header -->
-
-                <div class="entry-content"><?php the_content(); ?></div>
-                <!-- /.entry-content -->
-
-                <footer class="_aty-article-footer">
-
-                    <div class="_aty-navigation">
-                        <div class="_aty-previous-post">
-                        </div>
-                        <!-- /._aty-previous-post -->
-                        <div class="_aty-next-post"></div>
-                        <!-- /._aty-next-post -->
-                    </div>
-                    <!-- /._aty-navigation -->
-
-                    <div class="_aty-related-articles">
-
-                        <div class="_aty-related-wrapper">
-                            <div class="_aty-block">
-                                <figure class="_aty-featured-image"></figure>
-                                <!-- /._aty-featured-image -->
-                                <h3 class="entry-title"></h3>
-                                <!-- /.entry-title -->
-                                <div class="_aty-meta-info">
-                                    <div class="_aty-author">
-                                    </div>
-                                    <!-- /._aty-author -->
-                                    <div class="_aty-pub-date">
-                                    </div>
-                                    <!-- /._aty-pub-date -->
-                                </div>
-                                <!-- /._aty-meta-info -->
-                            </div>
-                            <!-- /._aty-block -->
-                        </div>
-                        <!-- /._aty-related-wrapper -->
-
-                    </div>
-                    <!-- /._aty-related-articles -->
-                </footer>
-                <!-- /._aty-article-footer -->
-
-            </article>
-            <!-- /._aty-wrapper -->
-
+                </div>
+            </div>
         </section>
-        <!-- /._aty-section._aty-article -->
+        <section class="aty__block-wrapper blog-details aty__gutter-space aty__bg--white">
+            <div class="container">
+                <div class="row">
+                    <div class="aty__story--content blog-detail">
+                        <div class="aty__story--content--inner">
+                            <?php the_content(); ?>
+                        </div>
+                        <!-- /.aty__story--content--inner -->
+                    </div>
+                    <div class="aty__story--sidebar">
+                        <aside class="aty__also-read">
+                            <?php articely_get_recent_stories(); ?>
+                        </aside>
+                        <!-- /.aty__also-read -->
+                    </div>
+                </div>
+            </div>
+        </section>
 <?php
     endwhile;
 endif;

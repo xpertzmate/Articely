@@ -1,0 +1,96 @@
+/**
+* Clearing and floating
+*/
+
+.alignleft,
+.float-left {
+  float: left;
+
+  img & {
+    margin-right: $base-spacing-unit;
+  }
+}
+
+.alignright,
+.float-right {
+  float: right;
+
+  img & {
+    margin-left: $base-spacing-unit;
+  }
+}
+
+.aligncenter,
+.float-center {
+  display: block;
+
+  margin: {
+    left: auto;
+    right: auto;
+  }
+
+  img & {
+    margin-bottom: $base-spacing-unit;
+  }
+}
+
+
+
+/**
+* Text aligments
+*/
+
+.align-text-left {
+  text-align: left;
+}
+
+.align-text-right {
+  text-align: right;
+}
+
+.align-text-center {
+  text-align: center;
+}
+
+
+/**
+ * Elements visibility
+ */
+
+.visible-on-mobile {
+  display: block !important;
+
+  @include resp-min($breakpoint-sm) {
+    display: none !important;
+  }
+  @include resp-min($breakpoint-md) {
+    display: none !important;
+  }
+  @include resp-min($breakpoint-lg) {
+    display: none !important;
+  }
+}
+
+.visible-on-tablet {
+  display: block !important;
+
+  @include resp-min($breakpoint-md) {
+    display: none !important;
+  }
+
+  @include resp-min($breakpoint-lg) {
+    display: none !important;
+  }
+
+}
+
+.visible-on-desktop {
+  @include resp-min($breakpoint-md) {
+    display: block !important;
+  }
+}
+
+
+/**
+ * Accessibility
+ */

@@ -1,0 +1,103 @@
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  width: auto;
+  transition: all .5s;
+  text-transform: capitalize;
+  width: 200px;
+  height: 40px;
+
+  position: relative;
+
+  @include resp-min($breakpoint-md) {
+    padding: 15px 25px;
+
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  &.is-disabled,
+  &:disabled {
+    pointer-events: none;
+    opacity: .65;
+  }
+
+  a,
+  button {
+    color: $white;
+    position: relative;
+    background-color: $brand-color;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    border: solid 1px $brand-color;
+    font-family: $special-font;
+  }
+
+  &:hover {
+
+    a,
+    button {
+      background-color: $white;
+      color: $brand-color;
+      font-family: $special-font;
+
+    }
+
+    .aty__box--frame {
+      border-color: $brand-color;
+      display: none;
+    }
+  }
+
+  .aty__box--frame {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    right: 0;
+    bottom: 0;
+    height: calc(100% - 8px);
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    z-index: 9;
+    width: calc(100% - 8px);
+    transition: all 0.3s ease;
+  }
+
+  &._primary {
+    font-family: $special-font;
+    a {
+      border-color: $blue;
+    }
+
+    &:hover {
+      a {
+        border-color: $blue;
+      }
+
+      .aty__box--frame {
+        border-color: $brand-color;
+        display: none;
+      }
+    }
+
+    .aty__box--frame {
+      border: 1px dashed rgba(255, 255, 255, 0.4);
+    }
+
+  }
+}

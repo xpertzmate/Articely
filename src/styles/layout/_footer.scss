@@ -1,0 +1,157 @@
+.footer-section {
+  ._footer-grid {
+    width: 100%;
+    float: left;
+    color: $white;
+
+    @include resp-min($breakpoint-sm) {
+      width: calc(100% / 3);
+      padding-right: 20px;
+    }
+
+    .aty__footer-logo--img {
+      width: 230px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $white;
+      padding: 0;
+      margin: 0;
+    }
+
+    h4 {
+      color: $white;
+      font-family: $english-font;
+    }
+
+    .aty__heading--with-line {
+      position: relative;
+      margin-top: 30px;
+
+      @include resp-min($breakpoint-sm) {
+        margin-top: 20px;
+      }
+
+      h4 {
+        display: inline;
+        position: relative;
+
+        &:after {
+          content: "";
+          border-bottom: 1px solid $brand-color;
+          width: 80px;
+          position: absolute;
+          right: -100px;
+          display: block;
+          bottom: 7px;
+
+          @include resp-min($breakpoint-sm) {
+            width: 130px;
+            position: absolute;
+            right: -150px;
+            bottom: 7px;
+          }
+        }
+      }
+    }
+
+    ul {
+      margin: 15px 0 0 0;
+      padding: 0;
+
+      @include resp-min($breakpoint-sm) {
+        margin: 25px 0 0 0;
+      }
+
+      li {
+        padding: 0 0 7px 0;
+
+        a {
+          font-size: 16px;
+          color: $white;
+          padding: 0;
+          margin: 0;
+          font-family: $english-font;
+
+          &:hover {
+            color: $brand-color;
+          }
+        }
+      }
+
+      &.connect {
+        li {
+          display: inline-block;
+          margin-right: 15px;
+
+          img {
+            width: 30px;
+            opacity: 0.7;
+          }
+
+          &:hover {
+            img {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ._copy-write {
+    position: relative;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    font-size: 12px;
+    color: $white;
+    margin-top: 20px;
+    padding-top: 15px;
+    padding: 30px 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    .row {
+      display: flex;
+      flex-flow: wrap;
+      flex-direction: column-reverse;
+      text-align: center;
+
+      @include resp-min($breakpoint-sm) {
+        display: block;
+        text-align: left;
+      }
+    }
+
+    @include resp-min($breakpoint-sm) {
+      position: absolute;
+      margin-top: 0;
+      padding: 10px 0;
+    }
+
+    a,
+    p {
+      font-size: 12px;
+      color: $white;
+      display: inline-block;
+      margin: 0 10px 5px 10px;
+      opacity: 0.7;
+
+      @include resp-min($breakpoint-sm) {
+        margin: 0 15px 0px 0px;
+      }
+    }
+
+    a {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &._bg-black {
+    position: relative;
+  }
+}

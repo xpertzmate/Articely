@@ -1,0 +1,56 @@
+@charset 'UTF-8';
+
+// 1. Configuration
+@import "config/variables";
+@import "config/mixins";
+
+// 2. Vendors
+@import "vendor/simple-grid/simple-grid";
+
+// 3. Utilities
+@import "utils/reset";
+@import "utils/responsive";
+@import "utils/helpers";
+
+// 4. Base stuff
+@import "base/base";
+@import "base/grid";
+@import "base/images";
+@import "base/forms";
+@import "base/lists";
+@import "base/typography";
+
+// 5. Layout-related sections
+@import "layout/main";
+@import "layout/header";
+@import "layout/footer";
+
+// 6 .Components
+@import "components/buttons";
+@import "components/nav";
+@import "components/alerts";
+
+// 7. Page-specific styles
+@import "pages/home";
+@import "pages/inner-pages";
+/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+@import url(font-awesome.min.css);
+@import url(owl.carousel.min.css);
+/*--------------------------------------------------------------------- basic ---------------------------------------------------------------------*/
+
+/**-- heading section --**/
+/*---------------------------- preloader area ----------------------------*/
+/*--------------------------------------------------------------------- header ---------------------------------------------------------------------*/
+/** slider section **/
+/** about **/
+/** end about **/
+/** blog **/
+/** end blog **/
+/** Our Client **/
+/** end Our Client **/
+/*--------------------------------------------------------------------- footer ---------------------------------------------------------------------*/
+/* --------------------------------------------------- SIDEBAR STYLE ----------------------------------------------------- */
+/*--------------------------------------------------------------------- ener page css ---------------------------------------------------------------------*/
